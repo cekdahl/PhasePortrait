@@ -27,7 +27,7 @@ and then load the package using
      PortraitDensity -> 12
      ]
 
-![Pendulum phase portrait](https://dl.dropboxusercontent.com/u/2736911/phaseportrait_ex1.png)
+![Pendulum phase portrait](https://github.com/cekdahl/PhasePortrait/blob/master/assets/phaseportrait_ex1.png?raw=true)
 
     PhasePortrait[{
       x'[t] == -x[t],
@@ -36,7 +36,7 @@ and then load the package using
      PortraitDensity -> 16
      ]
 
-![Linear system phase portrait](https://dl.dropboxusercontent.com/u/2736911/phaseportrait_ex2.png)
+![Linear system phase portrait](https://github.com/cekdahl/PhasePortrait/blob/master/assets/phaseportrait_ex2.png?raw=true)
 
 # Options
 *PhasePortrait\`* can be controlled through several options that are listed here below. It can also be given any options that can be given to `ParametricPlot`, such as `PlotTheme` or `Epilog`.
@@ -44,7 +44,7 @@ and then load the package using
 ## PortraitDensity
 `PortraitDensity` determines the density of the phase portrait. A lower number gives a more sparse phase portrait. To understand what exactly `PortraitDensity` is, it helps to know how the algorithm that picks trajectories works. It starts by dividing up the area into cells, which are marked "empty". When a trajectory passes through a cell it is marked as "occupied". Trajectories are added to the phase portrait one by one; when the next trajectory is selected it cannot start in an occupied cell. When all cells are occupied the algorithm is done.
 
-![A trajectory and the cells that it passes through.](https://dl.dropboxusercontent.com/u/2736911/phaseportrait_ex3.png)
+![A trajectory and the cells that it passes through.](https://github.com/cekdahl/PhasePortrait/blob/master/assets/phaseportrait_ex3.png?raw=true)
 
 `PortraitDensity` is the number of cells along the shortest end of the plot. If the aspect ratio of the plot is one, there are exactly `PortraitDensity` number of cells along each direction.
 
@@ -60,7 +60,7 @@ Because the starting points of trajectories are selected from empty cells, as de
 
     CellOrdering -> "Clockwise"
 
-![Clockwise cell ordering](https://dl.dropboxusercontent.com/u/2736911/phaseportrait_ex5.png)
+![Clockwise cell ordering](https://github.com/cekdahl/PhasePortrait/blob/master/assets/phaseportrait_ex5.png?raw=true)
 
 This is sometimes called a "spiral matrix".
 
@@ -68,7 +68,7 @@ This is sometimes called a "spiral matrix".
 
     CellOrdering -> "Random"
 
-![Random cell ordering](https://dl.dropboxusercontent.com/u/2736911/phaseportrait_ex6.png)
+![Random cell ordering](https://github.com/cekdahl/PhasePortrait/blob/master/assets/phaseportrait_ex6.png?raw=true)
 
 (For example.)
 
@@ -76,7 +76,7 @@ This is sometimes called a "spiral matrix".
 
     CellOrdering -> "OddSymmetric"
 
-![Odd symmetric cell ordering.](https://dl.dropboxusercontent.com/u/2736911/phaseportrait_ex4.png)
+![Odd symmetric cell ordering.](https://github.com/cekdahl/PhasePortrait/blob/master/assets/phaseportrait_ex4.png?raw=true)
 
 Meant to be used with dynamical systems that have odd symmetric solutions.
 
@@ -91,7 +91,7 @@ It is possible to manually provide starting points for trajectories using the op
      GenerateInitialValues -> False
      ]
 
-![Manually specified starting points.](https://dl.dropboxusercontent.com/u/2736911/phaseportrait_ex7.png)
+![Manually specified starting points.](https://github.com/cekdahl/PhasePortrait/blob/master/assets/phaseportrait_ex7.png?raw=true)
 
 ## Tolerances
 As mentioned in the section on `PortraitBoundsTolerance` there are a couple of things that can stop a trajectory. One is if it travels outside of the given area, another is if it grows too long. A third reason for stopping a trajectory is if it approaches an equilibrium - it will keep going closer and closer as time wears on but it does not affect the visualization of it. In order to save time, it is better to stop integrating. Let delta be the distance between the current position and the previous position, and let the current position be p. If delta < Er*p+Ea then the trajectory is considered to have reached equilibrium, where Er is the relative tolerance and Ea is the absolute tolerance. By default both Er and Ea are 10^-6, but if this needs to be changed for whatever reason it can be changed using the options `RelativeTolerance` and `AbsoluteTolerance`.
