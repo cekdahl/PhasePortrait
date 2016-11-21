@@ -5,7 +5,7 @@ Created by [Calle Ekdahl](https://github.com/cekdahl).
 
 GPL-2.0+ licensed.
 
-Current version: 1.0
+Current version: 1.0.1
 
 Requires Mathematica 10 or newer.
 
