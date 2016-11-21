@@ -136,7 +136,7 @@ Trajectory[eqns_, {x_,y_}, t_, {{xmin_,ymin_}, {xmax_,ymax_}}, {x0_,y0_}, {relto
 
 UpdateGrid[grid_, {{xmin_, ymin_}, {xmax_, ymax_}}, {x_, y_}] := Module[
   {tmin, tmax, delta, nrOfSquares, n = 4, samples},
-  {tmin, tmax} = MinMax[x["Grid"]];
+  {tmin, tmax} = {Min[#], Max[#]}&[x["Grid"]];
   nrOfSquares[0] = 0;
   nrOfSquares[1] = 0.5;
   While[nrOfSquares[0] < nrOfSquares[1],
