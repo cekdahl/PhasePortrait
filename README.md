@@ -7,7 +7,9 @@ GPL-2.0+ licensed.
 
 Current version: 1.0
 
-This package is based on algorithms described in *Practical Numerical Algorithms for Chaotic Systems*, by T.S. Parker and L.O. Chua (1989). Chapter 10 is particularly relevant.
+Requires Mathematica 10 or newer.
+
+This package is based on algorithms described in *Practical Numerical Algorithms for Chaotic Systems*, by T.S. Parker and L.O. Chua (1989).
 
 # Installation
 Download the latest version of the package from the *releases* tab here on Github. Drop *PhasePortrait.m* into
