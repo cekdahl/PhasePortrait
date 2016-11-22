@@ -4,7 +4,7 @@
 (* :Title: PhasePortrait                   *)
 (* :Context: PhasePortrait`                *)
 (* :Author: Calle Ekdahl                   *)
-(* :Date: 2016-12-30                       *)
+(* :Date: 2015-12-30                       *)
 
 (* :Package Version: 1.0                   *)
 (* :Mathematica Version: 10.3              *)
